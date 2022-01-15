@@ -18,6 +18,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SignUpPage_1"/>
+        <activity android:name=".SignUpPage_2"/>
+        <activity android:name=".SignInPage"/>
+        <activity android:name=".VolunteerHomePage"/>
+
+
+
+
+
+
+
     </application>
 
 </manifest>
