@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FarmersAppNIC">
         <activity
+            android:name=".farmer_list"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -18,17 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUpPage_1"/>
-        <activity android:name=".SignUpPage_2"/>
-        <activity android:name=".SignInPage"/>
-        <activity android:name=".VolunteerHomePage"/>
-
-
-
-
-
-
-
+        <activity android:name=".SignUpPage_1" />
+        <activity android:name=".SignUpPage_2" />
+        <activity android:name=".SignInPage" />
+        <activity android:name=".VolunteerHomePage" />
     </application>
 
 </manifest>

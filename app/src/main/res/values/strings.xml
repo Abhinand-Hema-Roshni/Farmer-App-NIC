@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Farmers-App-NIC</string>
+    <string name="farmerlist_textview">Select name of farmer from list:</string>
+    <string name="select_btn">SELECT</string>
 </resources>
