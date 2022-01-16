@@ -19,7 +19,7 @@
         app:layout_constraintVertical_bias="0.066" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/select_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/select_btn"
@@ -32,17 +32,21 @@
 
     <!-- Table View-->
     <HorizontalScrollView
-        android:layout_width="413dp"
-        android:layout_height="651dp"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="91dp">
+        android:layout_width="396dp"
+        android:layout_height="515dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.592">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewMovieList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:nestedScrollingEnabled="false"
-            tools:listitem="@layout/table_list_item" />
+            tools:listitem="@layout/farmer_table_list_item" />
 
     </HorizontalScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

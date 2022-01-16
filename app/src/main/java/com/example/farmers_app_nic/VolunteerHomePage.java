@@ -14,13 +14,24 @@ public class VolunteerHomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.volunteer_homepage);
 
-        Button existing_farmer_btn;
+        Button existing_farmer_btn, sign_out_btn;
         existing_farmer_btn = findViewById(R.id.existing_farmer_button);
+        sign_out_btn = findViewById(R.id.sign_out_button);
 
+        //existing farmer
         existing_farmer_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), farmer_list.class);
+                startActivity(intent);
+            }
+        });
+
+        //sign out
+        sign_out_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), MainActivity.class);
                 startActivity(intent);
             }
         });

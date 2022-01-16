@@ -7,22 +7,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class farmer_list extends AppCompatActivity {
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+public class view_crop_details extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.farmer_list);
-
-        Button select_btn;
-        select_btn = findViewById(R.id.select_btn);
-
-        select_btn.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.view_crop_details);
+        FloatingActionButton add_crop_btn;
+        add_crop_btn = findViewById(R.id.add_crop_btn);
+        add_crop_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(farmer_list.this, view_crop_details.class);
+                Intent intent = new Intent(view.getContext(), add_crop_details.class);
                 startActivity(intent);
             }
         });
     }
+
 }

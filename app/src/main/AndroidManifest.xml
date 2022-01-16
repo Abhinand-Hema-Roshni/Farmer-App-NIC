@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FarmersAppNIC">
         <activity
+            android:name=".add_crop_details"
+            android:exported="false" />
+        <activity
+            android:name=".view_crop_details"
+            android:exported="false" />
+        <activity
             android:name=".farmer_list"
             android:exported="false" />
         <activity
