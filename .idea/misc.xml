@@ -3,22 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Roshni/AndroidStudioProjects/FarmersAppNIC/app/src/main/res/layout/activity_add_crop_details.xml" value="0.259375" />
-        <entry key="..\:/Users/Roshni/AndroidStudioProjects/FarmersAppNIC/app/src/main/res/layout/activity_farmer_list.xml" value="0.176" />
-        <entry key="..\:/Users/Roshni/AndroidStudioProjects/FarmersAppNIC/app/src/main/res/layout/activity_main.xml" value="0.259375" />
-        <entry key="..\:/Users/Roshni/AndroidStudioProjects/FarmersAppNIC/app/src/main/res/layout/activity_view_crop_details.xml" value="0.259375" />
-        <entry key="..\:/Users/Roshni/AndroidStudioProjects/FarmersAppNIC/app/src/main/res/layout/add_crop_details.xml" value="0.72" />
-        <entry key="..\:/Users/Roshni/AndroidStudioProjects/FarmersAppNIC/app/src/main/res/layout/crop_table_list_item.xml" value="0.259375" />
-        <entry key="..\:/Users/Roshni/AndroidStudioProjects/FarmersAppNIC/app/src/main/res/layout/sign_in_page.xml" value="0.259375" />
-        <entry key="..\:/Users/Roshni/AndroidStudioProjects/FarmersAppNIC/app/src/main/res/layout/sign_up_page_1.xml" value="0.264" />
-        <entry key="..\:/Users/Roshni/AndroidStudioProjects/FarmersAppNIC/app/src/main/res/layout/sign_up_page_2.xml" value="0.259375" />
-        <entry key="..\:/Users/Roshni/AndroidStudioProjects/FarmersAppNIC/app/src/main/res/layout/table_list_item.xml" value="0.259375" />
-        <entry key="..\:/Users/Roshni/AndroidStudioProjects/FarmersAppNIC/app/src/main/res/layout/view_crop_details.xml" value="0.259375" />
-        <entry key="..\:/Users/Roshni/AndroidStudioProjects/FarmersAppNIC/app/src/main/res/layout/volunteer_homepage.xml" value="0.264" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/add_crop_details.xml" value="0.24583333333333332" />
+        <entry key="app/src/main/res/layout/crop_table_list_item.xml" value="0.24583333333333332" />
+        <entry key="app/src/main/res/layout/farmer_details.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/farmer_list.xml" value="0.24583333333333332" />
+        <entry key="app/src/main/res/layout/farmer_table_list_item.xml" value="0.24583333333333332" />
+        <entry key="app/src/main/res/layout/rader_details.xml" value="0.23177083333333334" />
+        <entry key="app/src/main/res/layout/sign_in_page.xml" value="0.28442028985507245" />
+        <entry key="app/src/main/res/layout/sign_up_page.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/sign_up_page_1.xml" value="0.28442028985507245" />
+        <entry key="app/src/main/res/layout/sign_up_page_2.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/trader_details.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/view_crop_details.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/volunteer_homepage.xml" value="0.28442028985507245" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
