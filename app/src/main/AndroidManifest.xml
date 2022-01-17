@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FarmersAppNIC">
         <activity
+            android:name=".view_trader_details"
+            android:exported="false" />
+        <activity
             android:name=".FarmerDetails"
             android:exported="false" />
         <activity
@@ -19,7 +22,7 @@
             android:name=".view_crop_details"
             android:exported="false" />
         <activity
-            android:name=".farmer_list"
+            android:name=".view_farmer_list"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
