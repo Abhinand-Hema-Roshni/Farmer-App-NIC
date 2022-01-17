@@ -18,7 +18,7 @@ public class VolunteerHomePage extends AppCompatActivity {
         existing_farmer_btn = findViewById(R.id.existing_farmer_button);
         sign_out_btn = findViewById(R.id.sign_out_button);
         existing_trader_btn = findViewById(R.id.existing_trader_btn);
-        new_trader_btn = findViewById(R.id.new_trader_button);
+        new_trader_btn = findViewById(R.id.new_trader_btn);
 
         //existing farmer
         existing_farmer_btn.setOnClickListener(new View.OnClickListener() {
