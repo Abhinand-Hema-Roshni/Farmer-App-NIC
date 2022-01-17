@@ -12,6 +12,8 @@
         <activity
             android:name=".FarmerDetails"
             android:exported="false" />
+        <activity android:name=".TraderDetails"
+            android:exported="false"/>
         <activity
             android:name=".add_crop_details"
             android:exported="false" />
