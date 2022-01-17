@@ -7,12 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class farmer_list extends AppCompatActivity {
+public class view_farmer_list extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.farmer_list);
+        setContentView(R.layout.view_farmer_list);
 
         Button select_btn;
         select_btn = findViewById(R.id.select_btn);
@@ -20,7 +20,7 @@ public class farmer_list extends AppCompatActivity {
         select_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(farmer_list.this, view_crop_details.class);
+                Intent intent = new Intent(view_farmer_list.this, view_crop_details.class);
                 startActivity(intent);
             }
         });

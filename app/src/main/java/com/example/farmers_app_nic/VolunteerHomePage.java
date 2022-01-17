@@ -14,37 +14,36 @@ public class VolunteerHomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.volunteer_homepage);
 
-        Button existing_farmer_btn, sign_out_btn, new_trader_btn,new_farmer_button;
+        Button existing_farmer_btn, sign_out_btn, existing_trader_btn, new_trader_btn;
         existing_farmer_btn = findViewById(R.id.existing_farmer_button);
         sign_out_btn = findViewById(R.id.sign_out_button);
-        new_trader_btn=findViewById(R.id.new_trader_button);
-        new_farmer_button=findViewById(R.id.new_farmer_button);
-
-        //new trader
-        new_trader_btn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                startActivity(new Intent(view.getContext(),TraderDetails.class));
-            }
-        });
-
-        //new farmer
-        new_farmer_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(view.getContext(),FarmerDetails.class));
-            }
-        });
+        existing_trader_btn = findViewById(R.id.existing_trader_btn);
+        new_trader_btn = findViewById(R.id.new_trader_btn);
 
         //existing farmer
         existing_farmer_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), farmer_list.class);
+                Intent intent = new Intent(view.getContext(), view_farmer_list.class);
                 startActivity(intent);
             }
         });
-
+        //new trader
+        new_trader_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), TraderDetails.class);
+                startActivity(intent);
+            }
+        });
+        //existing trader
+        existing_trader_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), view_trader_details.class);
+                startActivity(intent);
+            }
+        });
         //sign out
         sign_out_btn.setOnClickListener(new View.OnClickListener() {
             @Override

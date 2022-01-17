@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".farmer_list">
+    tools:context=".view_farmer_list">
 
     <TextView
         android:id="@+id/textView16"
@@ -32,17 +32,17 @@
 
     <!-- Table View-->
     <HorizontalScrollView
-        android:layout_width="396dp"
-        android:layout_height="515dp"
+        android:layout_width="408dp"
+        android:layout_height="513dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.592">
+        app:layout_constraintVertical_bias="0.587">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewMovieList"
+            android:id="@+id/recyclerView_FarmerDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:nestedScrollingEnabled="false"
