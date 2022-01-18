@@ -14,11 +14,21 @@ public class VolunteerHomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.volunteer_homepage);
 
-        Button existing_farmer_btn, sign_out_btn, existing_trader_btn, new_trader_btn;
+        Button existing_farmer_btn, sign_out_btn, existing_trader_btn, new_trader_btn, new_farmer_button;
         existing_farmer_btn = findViewById(R.id.existing_farmer_button);
         sign_out_btn = findViewById(R.id.sign_out_button);
         existing_trader_btn = findViewById(R.id.existing_trader_btn);
         new_trader_btn = findViewById(R.id.new_trader_btn);
+        new_farmer_button = findViewById(R.id.new_farmer_button);
+
+
+        //new farmer
+        new_farmer_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(view.getContext(), FarmerDetails.class));
+            }
+        });
 
         //existing farmer
         existing_farmer_btn.setOnClickListener(new View.OnClickListener() {
