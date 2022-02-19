@@ -28,10 +28,11 @@
             android:id="@+id/textView14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
             android:text="Volunteer Sign In Page"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/textView15"
@@ -46,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:textSize="12sp" />
 
         <Button
@@ -61,7 +62,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Enter OTP"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName|textPassword" />
 
         <CheckBox
             android:id="@+id/checkBox"
