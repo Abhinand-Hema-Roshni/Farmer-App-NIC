@@ -47,14 +47,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number"
+            android:inputType="text"
             android:textSize="12sp" />
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/send_otp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="GET OTP" />
+            android:text="SEND OTP" />
 
         <EditText
             android:id="@+id/otp_editText"
