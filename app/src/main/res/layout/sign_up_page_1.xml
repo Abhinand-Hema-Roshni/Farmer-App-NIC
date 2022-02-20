@@ -31,7 +31,7 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/firstName_editText"
+                android:id="@+id/sup_firstName_editText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -40,7 +40,7 @@
                 android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/lastName_editText"
+                android:id="@+id/sup_lastName_editText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -64,7 +64,7 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/phone_editText"
+                android:id="@+id/sup_phone_editText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
@@ -72,11 +72,11 @@
                 android:inputType="textPersonName" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/sup_sendotp_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="GET OTP" />
+                android:text="SEND OTP" />
         </LinearLayout>
 
         <TextView
@@ -89,7 +89,7 @@
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/signup_otp_editText"
+            android:id="@+id/sup_otp_editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
