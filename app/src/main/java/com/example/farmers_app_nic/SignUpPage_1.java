@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 
 public class SignUpPage_1 extends AppCompatActivity {
 
-
+//TODO ADD A NEW COLUMN TO THE C_TYPE TABLE IN POSTGRES
     EditText first_name,last_name;  //TODO will be sending to db
     EditText mobile_number, otp_entered;
     String phonenumber; //TODO we will be sending to db

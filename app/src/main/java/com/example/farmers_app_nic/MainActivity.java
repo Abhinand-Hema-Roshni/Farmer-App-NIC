@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 public class MainActivity extends AppCompatActivity {
 
     //Hi there, just checking if its working lolol
@@ -18,6 +22,13 @@ public class MainActivity extends AppCompatActivity {
 
         Button signup_btn;
         signup_btn = findViewById(R.id.sign_up_button);
+
+        //db instance
+
+        Database db =new Database();
+
+
+
 
         signup_btn.setOnClickListener(new View.OnClickListener() {
             @Override
