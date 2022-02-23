@@ -30,14 +30,16 @@ public class SignUpPage_1 extends AppCompatActivity {
     String otpid;
     Button send_otp;
     Button verify_otp_btn;
+    Button testBTN; //TODO remove
     FirebaseAuth mAuth;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_up_page_1);
 
-
+        testBTN = findViewById(R.id.testBTN); //TODO remove
         verify_otp_btn = findViewById(R.id.verify_otp_button);
         send_otp = findViewById(R.id.sup_sendotp_button);
         first_name = findViewById(R.id.sup_firstName_editText);
@@ -54,6 +56,14 @@ public class SignUpPage_1 extends AppCompatActivity {
                 initiateotp();
             }
         });
+         //TODO Remove code block
+        testBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), SignUpPage_2.class);
+                startActivity(intent);
+            }
+        }); //REMOVE TILL HERE
 
 
 
