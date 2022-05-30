@@ -55,32 +55,31 @@ public class SignInPage extends AppCompatActivity {
                 phonenumber = mobile_number.getText().toString();
 
                 //TODO: query the postgres db to check of the number exists then only intiate otp
-                initiateotp();
-
-
-
+               // initiateotp();
+                Toast.makeText(SignInPage.this, "send button pressed", Toast.LENGTH_SHORT).show();
+                System.out.println("send button pressed");
 //                Intent intent = new Intent(view.getContext(), VolunteerHomePage.class);
 //                startActivity(intent);
             }
         });
-//to send the otp
+
+
+
         signin_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                if(otp_entered.getText().toString().isEmpty())
+                System.out.println("click signin");
+              if(otp_entered.getText().toString().isEmpty())
                     Toast.makeText(getApplicationContext(),"Blank Field can not be processed",Toast.LENGTH_LONG).show();
                 else if(otp_entered.getText().toString().length()!=6)
                     Toast.makeText(getApplicationContext(),"INvalid OTP",Toast.LENGTH_LONG).show();
                 else
                 {
-                    PhoneAuthCredential credential=PhoneAuthProvider.getCredential(otpid,otp_entered.getText().toString());
-                    signInWithPhoneAuthCredential(credential);
-                    System.out.println("success");
 
-
+                    System.out.println("signin pressed");
              Intent intent = new Intent(view.getContext(), VolunteerHomePage.class);
             startActivity(intent);
+
 
 
                 }
@@ -88,11 +87,43 @@ public class SignInPage extends AppCompatActivity {
             }
         });
 
+
+
+
+
+
+
+
+//to send the otp
+//        signin_btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                if(otp_entered.getText().toString().isEmpty())
+//                    Toast.makeText(getApplicationContext(),"Blank Field can not be processed",Toast.LENGTH_LONG).show();
+//                else if(otp_entered.getText().toString().length()!=6)
+//                    Toast.makeText(getApplicationContext(),"INvalid OTP",Toast.LENGTH_LONG).show();
+//                else
+//                {
+//                    PhoneAuthCredential credential=PhoneAuthProvider.getCredential(otpid,otp_entered.getText().toString());
+//                    signInWithPhoneAuthCredential(credential);
+//                    System.out.println("success");
+//
+//
+//             Intent intent = new Intent(view.getContext(), VolunteerHomePage.class);
+//            startActivity(intent);
+//
+//
+//                }
+//
+//            }
+//        });
+
     }
 
     private void initiateotp() {
 
-
+        System.out.println("inside initiate");
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
                 phonenumber,        // Phone number to verify
                 60,                 // Timeout duration
@@ -103,6 +134,7 @@ public class SignInPage extends AppCompatActivity {
                     @Override
                     public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken)
                     {
+
                         otpid=s;
                     }
 
@@ -111,11 +143,13 @@ public class SignInPage extends AppCompatActivity {
                     @Override
                     public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential)
                     {
+                        System.out.println("verified");
                         signInWithPhoneAuthCredential(phoneAuthCredential);
                     }
 
                     @Override
                     public void onVerificationFailed(FirebaseException e) {
+                        System.out.println("failed to send");
                         Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG).show();
                     }
                 });

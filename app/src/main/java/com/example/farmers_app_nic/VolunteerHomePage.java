@@ -1,6 +1,7 @@
 package com.example.farmers_app_nic;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -42,16 +43,26 @@ public class VolunteerHomePage extends AppCompatActivity {
         new_trader_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), TraderDetails.class);
-                startActivity(intent);
+
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://colab.research.google.com/drive/1aeAvQo_z2_EKdfmsoewy8z9ykV2NcrY9?usp=sharing"));
+                startActivity(browserIntent);
+
+
+//                Intent intent = new Intent(v.getContext(), TraderDetails.class);
+//                startActivity(intent);
             }
         });
         //existing trader
         existing_trader_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), view_trader_details.class);
-                startActivity(intent);
+
+
+
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://colab.research.google.com/drive/1aeAvQo_z2_EKdfmsoewy8z9ykV2NcrY9?usp=sharing"));
+                startActivity(browserIntent);
+               // Intent intent = new Intent(view.getContext(), view_trader_details.class);
+               // startActivity(intent);
             }
         });
         //sign out

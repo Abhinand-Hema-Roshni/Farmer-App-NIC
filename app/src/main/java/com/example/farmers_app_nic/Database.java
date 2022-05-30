@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-
+//todo this is NOT USED!!!
 public class Database {
     private Connection connection;
 
@@ -22,10 +22,80 @@ public class Database {
     public Database()
     {
         this.url = String.format(this.url, this.host, this.port, this.database);
-        connect();
+      //  connect();
+send_volunteer();
+
         //this.disconnect();
         System.out.println("connection status:" + status);
     }
+
+
+
+    void send_volunteer(){
+
+
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run()
+            {
+                try
+                {
+                    Class.forName("org.postgresql.Driver");
+                    connection = DriverManager.getConnection(url, user, pass);
+
+                    if (connection!=null){
+                        status = true;
+                        System.out.println("connected:" + status);
+                        Statement st ;
+             //           System.out.println("true1 ");
+                        st = connection.createStatement();
+                        String sql;
+                      //  System.out.println("true 2");
+
+                        sql = "INSERT INTO crop_nature_details( c_nature, c_nature_local)VALUES('agriculture',null);";
+
+                        st.executeQuery(sql);
+                        System.out.println("sent data successfully");
+                        st.close();
+
+//TODO create a class object to store the valuie and call it and trhen send top next page.then send to db from nxtpage
+                    }
+                    else {
+                        System.out.println("not connected:" + status);}
+
+
+                }
+                catch (Exception e)
+                {
+                    status = false;
+                    System.out.print(e.getMessage());
+                    e.printStackTrace();
+                }
+            }
+        });
+        thread.start();
+        try
+        {
+            thread.join();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            this.status = false;
+        }
+
+
+
+
+
+    }
+
+
+
+
+
+
+
 
     private void connect()
     {

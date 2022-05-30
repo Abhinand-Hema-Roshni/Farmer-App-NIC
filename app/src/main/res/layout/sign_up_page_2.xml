@@ -5,7 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
+<!--    <ListView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,6 +22,39 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/sup_firstName_editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="First Name"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/sup_lastName_editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Last Name"
+                android:inputType="textPersonName" />
+        </LinearLayout>
 
 
         <TextView
@@ -58,25 +97,26 @@
 
 
         <RadioGroup
+            android:id="@+id/proof_adiogroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/aadhar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Aadhar Card" />
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/pan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="PAN Card" />
 
             <RadioButton
-                android:id="@+id/radioButton3"
+                android:id="@+id/driver_license"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Driver's License" />
@@ -89,21 +129,21 @@
             android:orientation="horizontal">
 
 
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Upload Proof"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
+          <ImageView
+              android:id="@+id/proof_imageview"
+              android:layout_gravity="center_horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:layout_weight="1"/>
+
+
 
             <Button
                 android:id="@+id/proof_upload_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Browse" />
+                android:text="OPEN" />
 
         </LinearLayout>
 
@@ -121,33 +161,60 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <TextView
-            android:id="@+id/textView12"
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Village"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
 
-        <Spinner
-            android:id="@+id/village_spinner"
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mandal"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/mandal_spinner"
 
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Mandal"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-        <Spinner
-            android:id="@+id/mandal_spinner"
+        </LinearLayout>
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Village"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+
+
+                <Spinner
+                    android:id="@+id/village_spinner"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+
+
+
+
 
         <Button
             android:id="@+id/signup_submit_button"
@@ -157,4 +224,6 @@
 
 
     </LinearLayout>
+    </ScrollView>
+<!--    </ListView>-->
 </androidx.constraintlayout.widget.ConstraintLayout>

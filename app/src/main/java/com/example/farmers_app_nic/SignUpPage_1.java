@@ -24,7 +24,7 @@ import java.util.concurrent.TimeUnit;
 public class SignUpPage_1 extends AppCompatActivity {
 
 //TODO ADD A NEW COLUMN TO THE C_TYPE TABLE IN POSTGRES
-    EditText first_name,last_name;  //TODO will be sending to db
+
     EditText mobile_number, otp_entered;
     String phonenumber; //TODO we will be sending to db
     String otpid;
@@ -42,8 +42,7 @@ public class SignUpPage_1 extends AppCompatActivity {
         testBTN = findViewById(R.id.testBTN); //TODO remove
         verify_otp_btn = findViewById(R.id.verify_otp_button);
         send_otp = findViewById(R.id.sup_sendotp_button);
-        first_name = findViewById(R.id.sup_firstName_editText);
-        last_name = findViewById(R.id.sup_lastName_editText);
+
         mobile_number = findViewById(R.id.sup_phone_editText);
         otp_entered = findViewById(R.id.sup_otp_editText);
         mAuth=FirebaseAuth.getInstance();
@@ -53,7 +52,7 @@ public class SignUpPage_1 extends AppCompatActivity {
             public void onClick(View view) {
                 phonenumber = mobile_number.getText().toString();
 
-                initiateotp();
+               // initiateotp();
             }
         });
          //TODO Remove code block
@@ -76,9 +75,7 @@ public class SignUpPage_1 extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"INvalid OTP",Toast.LENGTH_LONG).show();
                 else
                 {
-                    PhoneAuthCredential credential=PhoneAuthProvider.getCredential(otpid,otp_entered.getText().toString());
-                    signInWithPhoneAuthCredential(credential);
-                    System.out.println("success");
+
 
 
                     Intent intent = new Intent(view.getContext(), SignUpPage_2.class);
