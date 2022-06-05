@@ -1,35 +1,36 @@
 {
   "project_info": {
-    "project_number": "348701771685",
-    "project_id": "farmer-app-341813",
-    "storage_bucket": "farmer-app-341813.appspot.com"
+    "project_number": "161719465843",
+    "project_id": "farmers-app-nic",
+    "storage_bucket": "farmers-app-nic.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:348701771685:android:d9108f650b0b8dcacb0a4c",
+        "mobilesdk_app_id": "1:161719465843:android:c2aa669f8be81c88623706",
         "android_client_info": {
           "package_name": "com.example.farmers_app_nic"
         }
       },
       "oauth_client": [
         {
-          "client_id": "348701771685-7c5nh3fr6im4a1leuobvt0mj1s0prq6u.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.farmers_app_nic",
-            "certificate_hash": "f40a696a13e9aca8174cbebf7cab658ef2a84f35"
-          }
+          "client_id": "161719465843-nm84pi1uvbv0gjc2t1m3su2ftuvffqao.apps.googleusercontent.com",
+          "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAHqiKEfQH2QZbbHvGogyHfXJ7nTYJSv-Q"
+          "current_key": "AIzaSyDQ6ludlCGt2MpHK-Da87leDOvRZLaVEcw"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "161719465843-nm84pi1uvbv0gjc2t1m3su2ftuvffqao.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

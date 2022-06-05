@@ -64,6 +64,8 @@ public  class SignUpPage_2 extends AppCompatActivity implements AdapterView.OnIt
     ArrayList <String> MandalArray;
     ArrayList <String> villageArray;
 
+  public  String fname,lname,address,occ,district,mandal,village,ptype,pfile;
+
 
     RadioButton proof_button;
     private static final int RESULT_LOAD_IMAGE=1;
@@ -282,12 +284,17 @@ spinner_village = findViewById(R.id.village_spinner);
             @Override
             public void onClick(View view) {
 
+
+                Intent intent = new Intent(view.getContext(), VolunteerHomePage.class);
+                startActivity(intent);
+
+
                 int selectedId=proof_group.getCheckedRadioButtonId();
                 proof_button=(RadioButton)findViewById(selectedId);
                 Toast.makeText(SignUpPage_2.this,proof_button.getText(),Toast.LENGTH_SHORT).show();
 
                 RequestQueue queue = Volley.newRequestQueue(SignUpPage_2.this);
-                String url = "http://10.11.161.194:3300/user_details_final";
+                String url = "http://10.11.161.194:3300/user_details_insert";
 
                 // Request a string response from the provided URL.
                 StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
@@ -330,30 +337,44 @@ spinner_village = findViewById(R.id.village_spinner);
 //TODO COMPLETE VALIDATION
 
 
+
+
+
+
+
     }
 
     private void postUsingVolley() {
 
+
+        fname = first_name.getText().toString();
+        lname = last_name.getText().toString();
+        address = address_ed.getText().toString();
+        occ = occupation_ed.getText().toString();
+        ptype = proof_button.getText().toString();
+        district = spinner.getSelectedItem().toString();
+        mandal = spinner_mandal.getSelectedItem().toString();
+        village = spinner_village.getSelectedItem().toString();
+
         RequestQueue queue = Volley.newRequestQueue(this);
 
         // showProgressDialog();
-
-
+        System.out.println("post using volley called");
         Map<String, String> postParam= new HashMap<String, String>();
-        postParam.put("u_first_name", "696969");
-        postParam.put("u_last_name", "somepasswordhere");
-        postParam.put("u_occupation", "somepasswordhere");
-        postParam.put("u_address", "696969");
-        postParam.put("u_proof_type", "somepasswordhere");
-        postParam.put("u_proof_file", "somepasswordhere");
-        postParam.put("u_district", "696969");
-        postParam.put("u_mandal", "somepasswordhere");
-        postParam.put("u_village", "somepasswordhere");
-        postParam.put("u_id", "somepasswordhere");
-        postParam.put("u_phone", "somepasswordhere");
+        postParam.put("u_first_name", fname);
+        postParam.put("u_last_name", lname);
+        postParam.put("u_address", address);
+        postParam.put("u_occupation", occ);
+        postParam.put("u_proof_type", ptype);
+        postParam.put("u_proof_file", "file.jpg");
+        postParam.put("u_district", district);
+        postParam.put("u_mandal", mandal);
+        postParam.put("u_village", village);
+        postParam.put("u_id", "22");
+        postParam.put("u_phone", "6379844154");
 
         JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
-                "http://10.11.161.194:3300/crop_nature_details_post", new JSONObject(postParam),
+                "http://10.11.161.194:3300/user_details_insert", new JSONObject(postParam),
                 new Response.Listener<JSONObject>() {
 
                     @Override

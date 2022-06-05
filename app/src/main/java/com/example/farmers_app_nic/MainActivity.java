@@ -112,9 +112,9 @@ public class MainActivity extends AppCompatActivity {
 
 
             Map<String, String> postParam= new HashMap<String, String>();
-            postParam.put("c_nature_id", "2019115038");
-            postParam.put("c_nature", "horticulture");
-        postParam.put("c_nature_local", "local_horticulture");
+            postParam.put("c_nature_id", "307307");
+            postParam.put("c_nature", "sericulture");
+        postParam.put("c_nature_local", "local_sericulture");
 
 
             JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,

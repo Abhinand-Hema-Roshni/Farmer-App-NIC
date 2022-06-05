@@ -44,12 +44,11 @@ public class VolunteerHomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://colab.research.google.com/drive/1aeAvQo_z2_EKdfmsoewy8z9ykV2NcrY9?usp=sharing"));
-                startActivity(browserIntent);
 
 
-//                Intent intent = new Intent(v.getContext(), TraderDetails.class);
-//                startActivity(intent);
+
+                Intent intent = new Intent(v.getContext(), TraderDetails.class);
+                startActivity(intent);
             }
         });
         //existing trader
