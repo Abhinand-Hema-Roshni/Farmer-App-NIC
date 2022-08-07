@@ -65,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //the request is added here
+
 // Add the request to the RequestQueue.
         queue.add(stringRequest);
 
