@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 System.out.println(error);
-                Toast.makeText(MainActivity.this, "error in connection", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(MainActivity.this, "error in connection", Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -7,9 +7,10 @@
     tools:context=".view_trader_details">
 
     <HorizontalScrollView
-        
+
         android:layout_width="410dp"
         android:layout_height="730dp"
+        android:background="@drawable/download"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

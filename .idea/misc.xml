@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/activity_view_data.xml" value="0.11585365853658537" />
         <entry key="app/src/main/res/layout/add_crop_details.xml" value="0.296875" />
         <entry key="app/src/main/res/layout/crop_table_list_item.xml" value="0.296875" />
         <entry key="app/src/main/res/layout/farmer_details.xml" value="0.296875" />

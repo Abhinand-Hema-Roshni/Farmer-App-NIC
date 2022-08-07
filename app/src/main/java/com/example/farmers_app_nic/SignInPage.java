@@ -44,6 +44,7 @@ public class SignInPage extends AppCompatActivity {
 
     // buttons for generating OTP and verifying OTP
     private Button verifyOTPBtn, generateOTPBtn;
+    Button skipper;
 
     // string for storing our verification ID
     private String verificationId;
@@ -75,7 +76,7 @@ public class SignInPage extends AppCompatActivity {
         edtOTP = findViewById(R.id.otp_editText);
         verifyOTPBtn = findViewById(R.id.signin_submit_button);
         generateOTPBtn = findViewById(R.id.send_otp);
-
+skipper = findViewById(R.id.skip_btn);
 
 //  //sign in button
 //        send_otp.setOnClickListener(new View.OnClickListener() {
@@ -106,6 +107,14 @@ public class SignInPage extends AppCompatActivity {
 //            }
 //        });
 
+
+        skipper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(SignInPage.this, VolunteerHomePage.class);
+                startActivity(i);
+            }
+        });
 
         // setting onclick listener for generate OTP button.
         generateOTPBtn.setOnClickListener(new View.OnClickListener() {

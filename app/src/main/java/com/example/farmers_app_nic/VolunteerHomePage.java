@@ -51,15 +51,16 @@ public class VolunteerHomePage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        //existing trader
+        //NOW CHANGED TO VIEW DATA
         existing_trader_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-
-
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://colab.research.google.com/drive/1aeAvQo_z2_EKdfmsoewy8z9ykV2NcrY9?usp=sharing"));
-                startActivity(browserIntent);
+                Intent intent = new Intent(view.getContext(), ViewData.class);
+                startActivity(intent);
+//
+//                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://colab.research.google.com/drive/1f2x1DBCNK94IRUj1zvW0l_D9QT_kaN34?usp=sharing"));
+//                startActivity(browserIntent);
                // Intent intent = new Intent(view.getContext(), view_trader_details.class);
                // startActivity(intent);
             }
